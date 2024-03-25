@@ -1,0 +1,57 @@
+.hero {
+ background-image: url("../images/hero/beckHero(2).jpg");
+ background-size: 100%;
+ background-repeat: no-repeat;
+ background-position: top center;
+
+ &__content {
+  padding: 260px 40% 200px 0;
+ }
+
+ &__title {
+  font-weight: 700;
+  font-size: 58px;
+  color: $light;
+  margin-bottom: 45px;
+ }
+
+ &__title > span {
+  color: $white;
+ }
+}
+
+.btn-tipncal {
+ position: relative;
+ border-radius: 100px;
+ padding: 15px 70px 15px 50px;
+ font-weight: 700;
+ font-size: 32px;
+ color: $white;
+ background: $primary;
+ transition: background 0.4s ease-in-out;
+}
+
+.btn-tipncal:focus {
+ outline: none;
+}
+
+.btn-tipncal:focus, .btn-tipncal:hover {
+ background: $light;
+}
+
+.btn-tipncal:active {
+ background: $active;
+}
+
+.btn-tipncal::after {
+ content: "";
+ position: absolute;
+ top: 40%;
+ right: 50px;
+ border-radius: 2px;
+ width: 16px;
+ height: 16px;
+ border: 4px solid $white;
+ border-width: 4px 4px 0 0;
+ transform: rotate(45deg);
+}

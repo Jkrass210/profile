@@ -1,0 +1,87 @@
+.skillbox {
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+ background-image: url('../images/skillbox/skillBeck(1440).jpg');
+
+ &__content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+ }
+
+ &__title {
+  display: none;
+ }
+
+ &__link {
+  display: block;
+  max-width: 190px;
+  margin-bottom: 50px;
+ }
+
+ &__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+ }
+}
+
+.card {
+ display: flex;
+ justify-content: space-between;
+ padding: 18px 16px 130px;
+ border-radius: 20px;
+ background-color: $white;
+ background-repeat: no-repeat;
+ background-position: left bottom;
+
+ &__btn {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: $primary;
+ }
+
+ &__line {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  transform: rotate(45deg);
+  border-width: 0 2px 2px 0;
+ }
+
+ &__title {
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $dark;
+ }
+
+ &__desc {
+  text-align: end;
+  font-weight: 400;
+  font-size: 16px;
+  color: $text-medium-dark;
+ }
+}
+
+.card-one {
+ background-image: url('../images/skillbox(1440)/skillbox1.jpg');
+}
+
+.card-two {
+ background-image: url('../images/skillbox(1440)/skillbox2.jpg');
+}
+
+.card-three {
+ background-image: url('../images/skillbox(1440)/skillbox3.jpg');
+}
+
+.card-four {
+ background-image: url('../images/skillbox(1440)/skillbox4.jpg');
+}

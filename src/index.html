@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>KRASILNIKOV</title>
+ <link rel="stylesheet" href="css/normalize.css">
+ <link rel="stylesheet" href="css/style.css">
+ <script src="js/main.js" defer></script>
+</head>
+<body>
+ @@include("_header.html")
+ <main class="main">
+  <section class="main__section hero" id="hero">
+   <div class="hero__container container">
+    <div class="hero__content">
+     <div class="hero__box-left">
+      <h2 class="hero__title">
+       Создаю функциональные&nbsp;сайты <span>обреченные на&nbsp;успех!</span>
+      </h2>
+      <a class="hero__linck btn-tipncal" href="#portfolio">
+       Портфолио
+      </a>
+     </div>
+     <div class="hero__box-right">
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="main__section about" id="about">
+   <div class="about__container container">
+    <div class="about__content">
+     <div class="about__box-left">
+      <img class="about__img" src="images/me(1440).jpg" alt="мое фото">
+     </div>
+     <div class="about__box-right">
+      <h1 class="about__title title">
+       web&nbsp;&mdash; разработчик
+       <span class="title__span">Красильников Евгений</span>
+      </h1>
+      <div class="about__btn-grup">
+       <button class="about__btn btn-left about__btn--active btn-reset" id="btnAboutMe">Обо мне</button>
+       <button class="about__btn btn-right btn-reset" id="btnAboutTools">Инструменты</button>
+      </div>
+      <div class="about__info">
+       <div class="about__me about__box--active" id="aboutMe">
+        <p class="about__desc">Занимаюсь версткой и&nbsp;изучаю веб-разработку. Знаю как адаптивно сверстать вашу страницу при этом во&nbsp;всех современных браузерах она будет выглядеть одинаково! Подхожу к&nbsp;работе ответственно и&nbsp;выпускаю аккуратно и&nbsp;качественно написанный код, читабельный любому разработчику.</p>
+        <p class="about__desc">Каждый новый проект дает мне возможность роста в&nbsp;профессиональном плане, а&nbsp;пользователям продукта дает легкий и&nbsp;удобный способ его использовать.</p>
+       </div>
+       <div class="about__tools" id="aboutTools">
+        <ul class="about__items list-reset">
+         <li class="about__item item-tools">
+          <h3 class="item-tools__title">
+           Языки программирования
+          </h3>
+          <span class="item-tools__tool">HTML</span>
+          <span class="item-tools__tool">CSS</span>
+          <span class="item-tools__tool">JavaScript</span>
+          <span class="item-tools__tool">PHP</span>
+         </li>
+         <li class="about__item item-tools">
+          <h3 class="item-tools__title">
+           Препроцессоры
+          </h3>
+          <span class="item-tools__tool">SCSS</span>
+          <span class="item-tools__tool">SASS</span>
+          <span class="item-tools__tool">PUG</span>
+         </li>
+         <li class="about__item item-tools">
+          <h3 class="item-tools__title">
+           Системы контроля версий
+          </h3>
+          <span class="item-tools__tool">GitHub</span>
+          <span class="item-tools__tool">GitLub</span>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="main__section skillbox">
+   <div class="skillbox__container container">
+    <div class="skillbox__content">
+     <h2 class="skillbox__title">
+      Skillbox
+     </h2>
+     <a class="skillbox__link">
+      <img class="skillbox__lmg" src="images/Skillbox.svg" alt="скиллбокс">
+     </a>
+     <ul class="skillbox__items list-reset">
+      <li class="skillbox__item card-one card">
+       <button class="card__btn btn-reset">
+        <span class="card__line"></span>
+       </button>
+       <div class="card__title-group">
+        <h3 class="card__title">Веб-вёрстка</h3>
+        <p class="card__desc">базовый уровень</p>
+       </div>
+      </li>
+      <li class="skillbox__item card-two card">
+       <button class="card__btn btn-reset">
+       <span class="card__line"></span>
+       </button>
+       <div class="card__title-group">
+        <h3 class="card__title">Веб-вёрстка</h3>
+        <p class="card__desc">продвинутый уровень</p>
+       </div>
+      </li>
+      <li class="skillbox__item card-three card">
+       <button class="card__btn btn-reset">
+       <span class="card__line"></span>
+       </button>
+       <div class="card__title-group">
+        <h3 class="card__title">JAVASCRIPT</h3>
+        <p class="card__desc">базовый уровень</p>
+       </div>
+      </li>
+      <li class="skillbox__item card-four card">
+       <button class="card__btn btn-reset">
+        <span class="card__line"></span>
+       </button>
+       <div class="card__title-group">
+        <h3 class="card__title">PHP-разработка</h3>
+        <p class="card__desc">базовый уровень</p>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </section>
+  <section class="main__section portfolio" id="portfolio">
+   <div class="portfolio__container container">
+    <div class="portfolio__content">
+     <h2 class="portfolio__title">
+      Портфолто
+     </h2>
+     <p class="portfolio__desc">
+      В&nbsp;моем портфолио вы&nbsp;найдете разнообразные проекты, от&nbsp;веб-сайтов до&nbsp;онлайн-приложений, созданные с&nbsp;учетом современных технологий и&nbsp;требований клиента.
+     </p>
+     <ul class="portfolio__items list-reset">
+      <li class="portfolio__item item-one">
+       <a class="portfolio__linck" href="#">
+        <span class="portfolio__linck-span">Подробнее<span></span></span>
+        <img class="portfolio__img" src="images/portfolio(1440)/projekt1.jpg" alt="Изображение 1">
+       </a>
+      </li>
+      <li class="portfolio__item item-two">
+       <a class="portfolio__linck" href="#">
+        <span class="portfolio__linck-span">Подробнее<span></span></span>
+        <img class="portfolio__img" src="images/portfolio(1440)/projekt4.jpg" alt="Изображение 2">
+       </a>
+      </li>
+      <li class="portfolio__item item-three">
+       <a class="portfolio__linck" href="#">
+        <span class="portfolio__linck-span">Подробнее<span></span></span>
+        <img class="portfolio__img" src="images/portfolio(1440)/projekt2.jpg" alt="Изображение 3">
+       </a>
+      </li>
+      <li class="portfolio__item item-four">
+       <a class="portfolio__linck" href="#">
+        <span class="portfolio__linck-span">Подробнее<span></span></span>
+        <img class="portfolio__img" src="images/portfolio(1440)/projekt2.jpg" alt="Снова изображение 3">
+       </a>
+      </li>
+      <li class="portfolio__item item-five">
+       <a class="portfolio__linck" href="#">
+        <span class="portfolio__linck-span">Подробнее<span></span></span>
+        <img class="portfolio__img" src="images/portfolio(1440)/projekt3.jpg" alt="Изображение 4">
+       </a>
+      </li>
+      <li class="portfolio__item item-six">
+       <a class="portfolio__linck" href="#">
+        <span class="portfolio__linck-span">Подробнее<span></span></span>
+        <img class="portfolio__img" src="images/portfolio(1440)/projekt5.jpg" alt="Изображение 5">
+       </a>
+      </li>
+     </ul>
+     <div class="portfolio__linck-box">
+      <a class="portfolio__btn btn-tipncal" href="#">
+       Больше
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+ </main>
+ @@include("_footer.html")
+</body>
+</html>

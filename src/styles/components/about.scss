@@ -1,0 +1,148 @@
+.about {
+ &__content {
+  display: flex;
+  gap: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+ }
+
+ &__box-left {
+  width: calc(420 / 1240 * 100%);
+  border-radius: 20px;
+ }
+
+ &__box-right {
+  padding-top: 15px;
+  width: calc(720 / 1240 * 100%);
+ }
+
+ &__title {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $dark;
+ }
+
+ &__title > span {
+  padding-top: 15px;
+  display: block;
+  font-weight: 700;
+  font-size: 40px;
+  color: $dark;
+ }
+
+ &__btn-grup {
+  display: flex;
+  gap: 19px;
+  margin-bottom: 15px;
+ }
+
+ &__btn {
+  position: relative;
+  border-radius: 100px;
+  padding: 10px 25px;
+  font-weight: 700;
+  font-size: 24px;
+  color: $primary;
+  border: 1px solid $primary;
+  background-color: $white;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+ }
+
+ &__btn--active {
+  color: $white;
+  background-color: $primary;
+ }
+
+ &__btn:focus {
+  outline: none;
+ }
+
+ /*&__btn:hover.btn-left,
+ &__btn:active.btn-left {
+  color: $primary;
+  background-color: $white;
+ }*/
+
+ &__btn:focus,
+ &__btn:hover,
+ &__btn:active {
+  color: $white;
+  background-color: $primary;
+ }
+
+ &__btn::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -115px;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: $primary;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+ }
+
+ &__btn--active::before {
+  opacity: 1;
+ }
+
+ /*&__btn.btn-right {
+  color: $primary;
+  background-color: $white;
+ }*/
+
+ &__info {
+  position: relative;
+ }
+
+ &__me, &__tools {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
+ }
+
+ &__box--active {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+ }
+
+ &__desc {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 167%;
+  color: $text-medium-dark;
+ }
+
+ &__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ }
+}
+
+.item-tools {
+ &__title{
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 167%;
+  color: $text-medium-dark;
+ }
+
+ &__tool {
+  border-radius: 100px;
+  padding: 5px 25px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 167%;
+  color: $dark;
+  background: $white-lite;
+ }
+}

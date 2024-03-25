@@ -1,0 +1,130 @@
+.portfolio {
+ &__content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+ }
+
+ &__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 58px;
+  color: $dark;
+ }
+
+ &__desc {
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 167%;
+  color: $text-medium-dark;
+ }
+
+ &__items {
+  display: grid;
+  margin-bottom: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 220px 220px 220px;
+  row-gap: 30px;
+  column-gap: 20px;
+ }
+
+ &__item {
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+ }
+
+ &__item.item-one {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+ }
+
+ &__item.item-two {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+ }
+
+ &__item.item-three {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+ }
+
+ &__item.item-four {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+ }
+
+ &__item.item-five {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+ }
+
+ &__item.item-six {
+  grid-column: 3 / 5;
+  grid-row: 2 / 4;
+ }
+
+ &__linck {
+  position: relative;
+ }
+
+ &__linck-span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 32px;
+  opacity: 0;
+  color: $white;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out, background 0.4s ease-in-out;
+ }
+
+ &__linck-span > span {
+  content: "";
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  border: 4px solid $white;
+  border-width: 4px 4px 0 0;
+  transform: rotate(45deg);
+ }
+
+ &__linck:focus {
+  outline: none;
+ }
+
+ &__linck:focus > &__linck-span,
+ &__linck:hover > &__linck-span {
+  opacity: 1;
+  z-index: 1;
+ }
+
+ &__linck:active > &__linck-span {
+  backdrop-filter: blur(4px);
+  background: rgba(107, 185, 227, 0.4);
+ }
+
+ /*&__linck > &__img::before {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+ }*/
+
+ /*&__linck:focus,
+ &__linck:hover {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+ }*/
+
+ &__linck-box {
+  text-align: end; 
+ }
+}

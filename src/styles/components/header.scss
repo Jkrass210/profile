@@ -1,0 +1,136 @@
+.header {
+ position: absolute;
+ width: 100%;
+ padding-top: 30px;
+ padding-bottom: 30px;
+ //background: linear-gradient(180deg, #000 0%, #28353d 100%);
+
+ &__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ &__inems {
+  display: flex;
+  gap: 100px;
+  font-weight: 700;
+  font-size: 24px;
+ }
+
+ &__btn {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border: 2px solid $white;
+  border-radius: 100px;
+  transition: border-color 0.4s ease-in-out;
+ }
+
+ &__btn:focus {
+  outline: none;
+ }
+
+ &__btn:focus, &__btn:hover {
+  border-color: $light;
+ }
+
+ &__btn:active {
+  border-color: $active;
+ }
+
+ &__btn:focus > .btn__span, &__btn:hover > .btn__span {
+  background-color: $light;
+ }
+
+ &__btn:active > .btn__span {
+  border-color: $active;
+ }
+
+ &__link {
+  color: $white;
+  transition: color 0.4s ease-in-out;
+ }
+
+ &__link:focus {
+  outline: none;
+ }
+
+ &__link:focus, &__link:hover {
+  color: $light;
+ }
+
+ &__link:active {
+  color: $active;
+ }
+}
+
+.logo {
+ &__link {
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $white;
+  transition: color 0.4s ease-in-out;
+ }
+
+ &__link:focus {
+  outline: none;
+ }
+
+ &__link:focus, &__link:hover {
+  color: $light;
+ }
+
+ &__link:active {
+  color: $active;
+ }
+}
+
+.burger {
+ display: none;
+}
+
+.group-link {
+ &__items {
+  display: flex;
+  gap: 30px;
+ }
+
+ &__link {
+  color: $white;
+  transition: color 0.4s ease-in-out;
+ }
+
+ &__link:focus {
+  outline: none;
+ }
+
+ &__link:focus, &__link:hover {
+  color: $light;
+ }
+
+ &__link:active {
+  color: $active;
+ }
+}
+
+.btn {
+ &__span {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+  min-height: 24px;
+  background-color: $white;
+  border-radius: 50%;
+  transition: background-color 0.4s ease-in-out;
+ }
+
+ &__day {
+  display: none;
+ }
+}
