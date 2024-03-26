@@ -6,6 +6,7 @@ const inputName = document.querySelector('#name');
 const inputEmail = document.querySelector('#email');
 const spanName = document.querySelector('#spanName');
 const spanEmail = document.querySelector('#spanEmail');
+const btnDayNight = document.querySelector('#btnDayNight');
 
 function activationDesc(elemOne, elemTwo, btnOne, btnTwo) {
  if (!elemOne.classList.contains('about__box--active')) {
@@ -39,5 +40,21 @@ inputName.addEventListener('input', function(){
 inputEmail.addEventListener('input', function(){
  activationInput(inputEmail, spanEmail)
 });
+
+btnDayNight.addEventListener('click', function() {
+ const spanBtn = btnDayNight.querySelector('.btn__span');
+ const svgDay = btnDayNight.querySelector('.btn__day');
+ const svgNight = btnDayNight.querySelector('.btn__night');
+ if(spanBtn.classList.contains('btn__span-night')) {
+  spanBtn.classList.remove('btn__span-night')
+  svgDay.classList.add('btn__svg--hidden')
+  svgNight.classList.remove('btn__svg--hidden')
+ } else {
+  spanBtn.classList.add('btn__span-night')
+  svgNight.classList.add('btn__svg--hidden')
+  svgDay.classList.remove('btn__svg--hidden')
+ }
+
+})
 
 

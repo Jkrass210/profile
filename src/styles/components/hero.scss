@@ -55,3 +55,15 @@
  border-width: 4px 4px 0 0;
  transform: rotate(45deg);
 }
+
+@media (max-width: 1140px) {
+ .hero {
+  &__title {
+   font-size: calc(24px + (58 - 24) * ((100vw - 360px) / (1440 - 360)));
+  }
+ }
+
+ .btn-tipncal {
+  font-size: calc(16px + (32 - 16) * ((100vw - 360px) / (1440 - 360)));
+ }
+}

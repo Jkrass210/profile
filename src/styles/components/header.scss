@@ -127,10 +127,37 @@
   min-height: 24px;
   background-color: $white;
   border-radius: 50%;
-  transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, right 0.4s ease-in-out, left 0.4s ease-in-out;
  }
 
- &__day {
-  display: none;
+ &__span-night {
+  left: 31px;
+ }
+
+ &__span > svg {
+  transition: opacity 0.4s ease-in-out;
+ }
+
+ &__svg--hidden {
+  position: absolute;
+  opacity: 0;
+ }
+}
+
+@media (max-width: 1140px) {
+ .header {
+  &__group-link {
+   display: none;
+  }
+
+  &__inems {
+   font-size: calc(20px + (24 - 20) * ((100vw - 360px) / (1440 - 360)));
+  }
+ }
+
+ .logo {
+  &__link {
+   font-size: calc(20px + (24 - 20) * ((100vw - 360px) / (1440 - 360)));
+  }
  }
 }

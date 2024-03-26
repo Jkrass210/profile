@@ -85,3 +85,22 @@
 .card-four {
  background-image: url('../images/skillbox(1440)/skillbox4.jpg');
 }
+
+@media (max-width: 1140px) {
+ .skillbox {
+  &__link {
+   max-width: calc(130px + (190 - 130) * ((100vw - 360px) / (1440 - 360)));
+   margin-bottom: calc(25px + (50 - 25) * ((100vw - 360px) / (1440 - 360)));
+  }
+ }
+
+ .card {
+  &__title {
+   font-size: calc(14px + (24 - 14) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__desc {
+   font-size: calc(12px + (16 - 12) * ((100vw - 360px) / (1440 - 360)));
+  }
+ }
+}
