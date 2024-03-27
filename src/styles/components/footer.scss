@@ -157,7 +157,8 @@
  &__btn {
   width: 100%;
   border-radius: 100px;
-  padding: 15px 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-weight: 700;
   font-size: 32px;
   color: $white;
@@ -206,5 +207,54 @@
   font-size: 40px;
   color: $white;
   transition: color 0.4s ease-in-out;
+ }
+}
+
+@media (max-width: 1140px) {
+ .footer {
+  &__content {
+   padding-top: calc(20px + (60 - 20) * ((100vw - 360px) / (1440 - 360)));
+   padding-bottom: calc(20px + (60 - 20) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__title {
+   //margin-bottom: calc(15px + (30 - 15) * ((100vw - 360px) / (1440 - 360)));
+   font-size: calc(20px + (40 - 20) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__link-hh, &__link {
+   font-size: calc(14px + (24 - 14) * ((100vw - 360px) / (1440 - 360)));
+  }
+ }
+
+ .form {
+  &__title {
+   font-size: calc(16px + (32 - 16) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__input {
+   font-size: calc(14px + (24 - 14) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__input-span {
+   top: 20%;
+   font-size: calc(14px + (24 - 14) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__input-span--active {
+   //left: 50px;
+   //top: -25px;
+   font-size: calc(8px + (20 - 8) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__btn {
+   font-size: calc(16px + (32 - 16) * ((100vw - 360px) / (1440 - 360)));
+  }
+ }
+
+ .logo {
+  &__link-footer {
+   font-size: calc(20px + (40 - 20) * ((100vw - 360px) / (1440 - 360)));
+  }
  }
 }

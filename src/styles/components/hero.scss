@@ -1,6 +1,6 @@
 .hero {
  background-image: url("../images/hero/beckHero(2).jpg");
- background-size: 100%;
+ background-size: cover;
  background-repeat: no-repeat;
  background-position: top center;
 
@@ -61,9 +61,21 @@
   &__title {
    font-size: calc(24px + (58 - 24) * ((100vw - 360px) / (1440 - 360)));
   }
+
+  &__content {
+   padding-top: calc(90px + (260 - 90) * ((100vw - 360px) / (1440 - 360)));
+   padding-bottom: calc(40px + (200 - 40) * ((100vw - 360px) / (1440 - 360)));
+  }
  }
 
  .btn-tipncal {
+  padding: calc(8px + (15 - 8) * ((100vw - 360px) / (1440 - 360))) calc(45px + (70 - 45) * ((100vw - 360px) / (1440 - 360))) calc(8px + (15 - 8) * ((100vw - 360px) / (1440 - 360))) calc(25px + (50 - 25) * ((100vw - 360px) / (1440 - 360)));
   font-size: calc(16px + (32 - 16) * ((100vw - 360px) / (1440 - 360)));
+ }
+
+ .btn-tipncal::after {
+  right: calc(35px + (50 - 35) * ((100vw - 360px) / (1440 - 360)));
+  width: calc(13px + (16 - 13) * ((100vw - 360px) / (1440 - 360)));
+  height: calc(13px + (16 - 13) * ((100vw - 360px) / (1440 - 360)));
  }
 }

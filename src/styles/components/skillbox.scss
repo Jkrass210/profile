@@ -37,6 +37,7 @@
 
  &__btn {
   position: relative;
+  min-width: 33px;
   width: 33px;
   height: 33px;
   border-radius: 50%;
@@ -53,6 +54,10 @@
   border: 2px solid #fff;
   transform: rotate(45deg);
   border-width: 0 2px 2px 0;
+ }
+
+ &__title-group {
+  text-align: end;
  }
 
  &__title {
@@ -88,6 +93,11 @@
 
 @media (max-width: 1140px) {
  .skillbox {
+  &__content {
+   padding-top: calc(30px + (60 - 30) * ((100vw - 360px) / (1440 - 360)));
+   padding-bottom: calc(30px + (60 - 30) * ((100vw - 360px) / (1440 - 360)));
+  }
+
   &__link {
    max-width: calc(130px + (190 - 130) * ((100vw - 360px) / (1440 - 360)));
    margin-bottom: calc(25px + (50 - 25) * ((100vw - 360px) / (1440 - 360)));

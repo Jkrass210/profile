@@ -7,6 +7,9 @@ const inputEmail = document.querySelector('#email');
 const spanName = document.querySelector('#spanName');
 const spanEmail = document.querySelector('#spanEmail');
 const btnDayNight = document.querySelector('#btnDayNight');
+const burger = document.querySelector('#burger');
+const header = document.querySelector('#header');
+const closeBurger =document.querySelector('#closeBurger');
 
 function activationDesc(elemOne, elemTwo, btnOne, btnTwo) {
  if (!elemOne.classList.contains('about__box--active')) {
@@ -54,7 +57,16 @@ btnDayNight.addEventListener('click', function() {
   svgNight.classList.add('btn__svg--hidden')
   svgDay.classList.remove('btn__svg--hidden')
  }
+});
 
-})
+const mobMenu = header.querySelector('.header__wrapper-menu');
+
+burger.addEventListener('click', function(){
+ mobMenu.classList.add('header__wrapper-menu--active')
+});
+
+closeBurger.addEventListener('click', function(){
+ mobMenu.classList.remove('header__wrapper-menu--active')
+});
 
 

@@ -23,7 +23,7 @@
   display: grid;
   margin-bottom: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 220px 220px 220px;
+  //grid-template-rows: 220px 220px 220px;
   row-gap: 30px;
   column-gap: 20px;
  }
@@ -113,18 +113,29 @@
   background: rgba(107, 185, 227, 0.4);
  }
 
- /*&__linck > &__img::before {
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.4);
- }*/
-
- /*&__linck:focus,
- &__linck:hover {
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.4);
- }*/
-
  &__linck-box {
   text-align: end; 
+ }
+}
+
+@media (max-width: 1140px) {
+ .portfolio {
+  &__content {
+   padding-top: calc(40px + (100 - 40) * ((100vw - 360px) / (1440 - 360)));
+   padding-bottom: calc(40px + (100 - 40) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__title {
+   margin-bottom: calc(15px + (30 - 15) * ((100vw - 360px) / (1440 - 360)));
+   font-size: calc(24px + (58 - 24) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__desc {
+   font-size: calc(14px + (24 - 14) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  &__linck-span {
+   font-size: calc(16px + (32 - 16) * ((100vw - 360px) / (1440 - 360)));
+  }
  }
 }
