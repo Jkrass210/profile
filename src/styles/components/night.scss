@@ -1,0 +1,107 @@
+body {
+ transition: background-color 0.4s ease-in-out;
+}
+
+body.night-hteme {
+ background-color: $dark-bg;
+}
+
+.about {
+ &__title {
+  transition: color 0.4s ease-in-out;
+ }
+ 
+ &__title > span {
+  transition: color 0.4s ease-in-out;
+ }
+}
+
+body.night-hteme .about {
+ &__title {
+  color: $white;
+ }
+
+ &__title > span {
+  color: $white;
+ }
+
+ &__btn {
+  background-color: $dark-bg;
+ }
+
+ &__btn--active {
+  background-color: $primary;
+ }
+
+ &__btn.focus-visible,
+ &__btn:hover,
+ &__btn:active {
+  color: $light;
+  background-color: $primary;
+ }
+
+ &__desc {
+  color: $light;
+ }
+}
+
+.item-tools {
+ &__title {
+  transition: color 0.4s ease-in-out;
+ }
+
+ &__tool {
+  transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
+ }
+}
+
+body.night-hteme .item-tools {
+ &__title {
+  color: $light;
+ }
+
+ &__tool {
+  color: $white;
+  background: $text-medium-dark;
+ }
+}
+
+.skillbox {
+ transition: background-image 0.4s ease-in-out;
+
+ &__link path {
+  transition: fill 0.4s ease-in-out;
+ }
+}
+
+body.night-hteme .skillbox {
+ background-image: url('../images/skillbox/skillBeckDark(1440).jpg');
+
+ &__link path {
+  fill: $white;
+ }
+}
+
+.portfolio {
+ &__title, &__desc {
+  transition: color 0.4s ease-in-out;
+ }
+}
+
+body.night-hteme .portfolio {
+ &__title {
+  color: $white;
+ }
+
+ &__desc {
+  color: $light;
+ }
+}
+
+.footer {
+ transition: background-image 0.4s ease-in-out;
+}
+
+body.night-hteme .footer {
+ background-image: url('../images/footer/footerDark(1440).jpg');
+}

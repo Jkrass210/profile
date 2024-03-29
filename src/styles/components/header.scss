@@ -32,7 +32,7 @@
   outline: none;
  }
 
- &__btn:focus, &__btn:hover {
+ &__btn.focus-visible, &__btn:hover {
   border-color: $light;
  }
 
@@ -40,7 +40,7 @@
   border-color: $active;
  }
 
- &__btn:focus > .btn__span, &__btn:hover > .btn__span {
+ &__btn.focus-visible > .btn__span, &__btn:hover > .btn__span {
   background-color: $light;
  }
 
@@ -57,7 +57,7 @@
   outline: none;
  }
 
- &__link:focus, &__link:hover {
+ &__link.focus-visible, &__link:hover {
   color: $light;
  }
 
@@ -95,7 +95,7 @@
   outline: none;
  }
 
- &__link:focus, &__link:hover {
+ &__link.focus-visible, &__link:hover {
   color: $light;
  }
 
@@ -123,7 +123,7 @@
   outline: none;
  }
 
- &__link:focus, &__link:hover {
+ &__link.focus-visible, &__link:hover {
   color: $light;
  }
 
@@ -214,9 +214,12 @@
 
   &__logo {
    padding-bottom: 15px;
-   border-bottom: 1px solid $white;
   }
 
+  &__wrapper-menu > &__logo {
+   border-bottom: 1px solid $white;
+  }
+  
   &__nav {
    display: block;
    position: absolute;

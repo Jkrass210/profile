@@ -24,6 +24,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
  }
+
+ &__item.swiper-slide {
+  box-sizing: border-box;
+ }
 }
 
 .card {
@@ -33,7 +37,7 @@
  border-radius: 20px;
  background-color: $white;
  background-repeat: no-repeat;
- background-position: left bottom;
+ background-position: -1px bottom;
 
  &__btn {
   position: relative;
@@ -111,6 +115,18 @@
 
   &__desc {
    font-size: calc(12px + (16 - 12) * ((100vw - 360px) / (1440 - 360)));
+  }
+ }
+}
+
+@media (max-width: 950px) {
+ .skillbox {
+  &__container {
+   overflow: hidden;
+  }
+
+  &__items {
+   gap: 0;
   }
  }
 }

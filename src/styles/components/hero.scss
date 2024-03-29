@@ -35,7 +35,7 @@
  outline: none;
 }
 
-.btn-tipncal:focus, .btn-tipncal:hover {
+.btn-tipncal.focus-visible, .btn-tipncal:hover {
  background: $light;
 }
 
@@ -74,8 +74,24 @@
  }
 
  .btn-tipncal::after {
-  right: calc(35px + (50 - 35) * ((100vw - 360px) / (1440 - 360)));
-  width: calc(13px + (16 - 13) * ((100vw - 360px) / (1440 - 360)));
-  height: calc(13px + (16 - 13) * ((100vw - 360px) / (1440 - 360)));
+  right: calc(30px + (50 - 30) * ((100vw - 360px) / (1440 - 360)));
+  width: calc(10px + (16 - 10) * ((100vw - 360px) / (1440 - 360)));
+  height: calc(10px + (16 - 10) * ((100vw - 360px) / (1440 - 360)));
+ }
+}
+
+@media (max-width: 770px) {
+ .hero {
+  &__content {
+   padding-right: 0;
+  }
+
+  &__box-left {
+   text-align: center;
+  }
+ }
+
+ .btn-tipncal::after {
+  border-width: 3px 3px 0 0;
  }
 }
