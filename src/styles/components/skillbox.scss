@@ -1,8 +1,5 @@
 .skillbox {
- background-repeat: no-repeat;
- background-position: center center;
- background-size: cover;
- background-image: url('../images/skillbox/skillBeck(1440).jpg');
+ background: linear-gradient(207deg, #72a0ba 0%, #dfebf7 100%);
 
  &__content {
   padding-top: 60px;
@@ -46,6 +43,15 @@
   height: 33px;
   border-radius: 50%;
   background-color: $primary;
+  transition: background-color 0.4s ease-in-out;
+ }
+
+ &__btn:focus {
+  outline: none;
+ }
+
+ &__btn:hover {
+  background-color: $light;
  }
 
  &__line {
@@ -56,6 +62,7 @@
   width: 10px;
   height: 10px;
   border: 2px solid #fff;
+  pointer-events: none;
   transform: rotate(45deg);
   border-width: 0 2px 2px 0;
  }
@@ -93,6 +100,19 @@
 
 .card-four {
  background-image: url('../images/skillbox(1440)/skillbox4.jpg');
+}
+
+.tooltip {
+ position: fixed;
+ z-index: 2;
+ padding: 8px;
+ text-align: center;
+ font-weight: 400;
+ font-size: 12px;
+ border-radius: 20px;
+ border: 1px solid $text-medium-dark;
+ color: $text-medium-dark;
+ background-color: $white;
 }
 
 @media (max-width: 1140px) {

@@ -136,3 +136,53 @@ resizableSwiper('(max-width: 950px)', '.skillbox__swiper', {
   },
  }
 );
+
+const sectionSkill = document.querySelector('#skillbox')
+let tooltipElem;
+document.onmouseover = function(e) {
+  let target = e.target
+  let tooltipHtml = target.dataset.tooltip
+  if(!tooltipHtml) return
+  tooltipElem = document.createElement('div')
+  tooltipElem.className = "tooltip"
+  tooltipElem.innerHTML = tooltipHtml
+  sectionSkill.append(tooltipElem)
+
+  let coord = target.getBoundingClientRect()
+  let left = coord.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2
+  if(left < 0) left = 5
+
+  let top = coord.top - tooltipElem.offsetHeight - 5
+  if(top < 0) top = coord.top + target.offsetHeight + 5
+
+  tooltipElem.style.left = left + 'px'
+  tooltipElem.style.top = top + 'px'
+};
+function removeTooltip() {
+  tooltipElem.remove()
+  tooltipElem = null
+}
+document.onmouseout = function(e) {
+  if(tooltipElem) {
+    removeTooltip()
+  }
+};
+document.addEventListener('click', function() {
+  if(!tooltipElem) {
+    removeTooltip()
+  }
+});
+document.addEventListener('scroll', function() {
+  removeTooltip()
+});
+document.addEventListener('touchmove', function() {
+  removeTooltip()
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    mobMenu.classList.remove('header__wrapper-menu--active')
+    document.body.classList.remove("stop-scroll");
+    removeTooltip()
+  }
+});

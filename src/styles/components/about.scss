@@ -257,3 +257,9 @@
   }
  }
 }
+
+@media (max-width: 340px) {
+ .about__title::before {
+  display: none;
+ }
+}

@@ -1,9 +1,6 @@
 .footer {
- background-repeat: no-repeat;
- background-size: cover;
- background-position: center center; 
- background-image: url('../images/footer/footer(1440).jpg');
-
+ background: linear-gradient(135deg, #28353d 0%, #4b6370 100%);
+ 
  &__content {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -311,6 +308,12 @@
   &__btn {
    padding-left: 25px;
    padding-right: 25px;
+  }
+ }
+
+ .logo {
+  &__items {
+   gap: calc(15px + (30 - 15) * ((100vw - 320px) / (950 - 320)));
   }
  }
 }

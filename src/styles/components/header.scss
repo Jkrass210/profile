@@ -75,6 +75,19 @@
   border: 2px solid $white;
   border-width: 2px 0 0 2px;
   transform: rotate(45deg);
+  transition: border-color 0.4s ease-in-out;
+ }
+
+ &__btn-clos:focus {
+  outline: none;
+ }
+
+ &__btn-clos.focus-visible, &__btn-clos:hover {
+  border-color: $light;
+ } 
+
+ &__btn-clos:active {
+  border-color: $active;
  }
 }
 
@@ -201,9 +214,7 @@
    visibility: hidden;
    transform: translateY(-120%);
    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.25);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-image: url('../images/hero/Mob_Menu.png');
+   background: linear-gradient(180deg, #141a1d 0%, #2d3a41 51.5%, #4b626e 100%);
    transition: transform 0.4s ease-in-out, visibility 0.4s ease-in-out;
   }
 
@@ -263,6 +274,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
  }
 
  .burger {
@@ -279,6 +291,7 @@
    width: 100%;
    height: 2px;
    background-color: $white;
+   transition: background-color 0.4s ease-in-out, width 0.4s ease-in-out;
   }
 
   &__line:nth-child(2) {
@@ -289,4 +302,25 @@
    width: 60%;
   }
  }
+
+ .burger:focus {
+  outline: none;
+ }
+ 
+ .burger.focus-visible > .burger__line, .burger:hover > .burger__line {
+  background-color: $light;
+ }
+ 
+ .burger:active > .burger__line {
+  width: 100%;
+  background-color: $active;
+ }
+
+ .group-link {
+  &__items {
+   gap: calc(15px + (30 - 15) * ((100vw - 320px) / (950 - 320)));
+  }
+ }
 }
+
+
